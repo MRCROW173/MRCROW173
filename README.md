@@ -2,7 +2,7 @@
 - 👀 I’m interested in All kinds of programming languages. 
 - 🌱 I’m currently learning C++
 - 💞️ I’m looking to collaborate on Blockchain products 
-- 📫 My email address iswz13124154500@outlook.com 
+- 📫 My email address is wz13124154500@outlook.com 
 
 
 <!---
