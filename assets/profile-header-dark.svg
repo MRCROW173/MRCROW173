@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="330" viewBox="0 0 1120 330" role="img" aria-labelledby="title desc">
+<title id="title">Wang Zhe — MRCROW173</title><desc id="desc">Computer vision, simulation and systems. An editorial portrait in typography, with a geometric study of a camera plane and a three-dimensional form.</desc>
+<rect width="1120" height="330" rx="14" fill="#101D2B"/>
+<rect x="22" y="22" width="1076" height="286" rx="5" fill="none" stroke="#314351"/>
+<path d="M64 74h34" stroke="#C9B280" stroke-width="2"/>
+<text x="111" y="79" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="600" letter-spacing="3" fill="#B7C2CB">MRCROW173 / ENGINEERING NOTES</text>
+<text x="61" y="168" font-family="Georgia,'Times New Roman',serif" font-size="70" fill="#F4F0E6">Wang Zhe</text>
+<text x="65" y="211" font-family="Arial,Helvetica,sans-serif" font-size="17" letter-spacing="0.4" fill="#B7C2CB">Computer vision, simulation &amp; systems.</text>
+<text x="65" y="271" font-family="Arial,Helvetica,sans-serif" font-size="11" letter-spacing="2.5" fill="#C9B280">OBSERVE. BUILD. VERIFY.</text>
+<g fill="none" stroke="#314351" stroke-width="1">
+ <circle cx="910" cy="163" r="108"/><circle cx="910" cy="163" r="84"/>
+ <path d="M768 54v228M724 94h320M724 232h320"/>
+ <path d="M731 136l119-47 119 37-103 49zM731 136v95l135 47v-103M866 278l103-57v-95"/>
+ <path d="M697 177l138-21M697 177l210-25M697 177l169 56" stroke-dasharray="4 6"/>
+</g>
+<g fill="none" stroke="#C9B280" stroke-width="1.5">
+ <path d="M835 118l72 34v64l-72-30zM835 118l41-26 73 33-42 27M907 216l42-30v-61"/>
+ <rect x="680" y="162" width="32" height="32" rx="4"/>
+</g>
+<g fill="#C9B280"><circle cx="835" cy="118" r="3"/><circle cx="907" cy="152" r="3"/><circle cx="949" cy="125" r="3"/><circle cx="907" cy="216" r="3"/></g>
+</svg>
