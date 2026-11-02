@@ -5,8 +5,14 @@
 </picture>
 
 <p align="center">
+  <strong>🇺🇸 English</strong> &nbsp;·&nbsp;
+  <a href="README_zh.md">🇨🇳 中文版</a>
+</p>
+
+<p align="center">
   <a href="#about">About</a> &nbsp;·&nbsp;
   <a href="#flagship-architectures--milestones">Flagship Systems</a> &nbsp;·&nbsp;
+  <a href="#visual-evidence--digital-twin-loop">Visual Evidence</a> &nbsp;·&nbsp;
   <a href="#research--engineering-focus">Research Focus</a> &nbsp;·&nbsp;
   <a href="#technical-matrix">Technical Matrix</a> &nbsp;·&nbsp;
   <a href="#engineering-principles">Principles</a> &nbsp;·&nbsp;
@@ -27,10 +33,34 @@ My engineering philosophy centers on closing the full loop: understanding the un
 
 ## Flagship Architectures & Milestones
 
-| System / Repository | Key Innovations & Architecture | Primary Metrics & Highlights | Status |
+| System / Repository | Key Innovations & Architecture | Primary Metrics & Highlights | Status & Access |
 | :--- | :--- | ---: | :---: |
-| **[LSAD-YOLO](https://github.com/MRCROW173/Yolo-Unity-Detection-Dystem)** | Self-developed lightweight detector; shallow detail retention (`PSDR-Down`), smooth-floor annealed localization loss (`AdaInner-CIoU`), Gaussian foreground gating (`GSFMGate`) | **90.41%** Dev mAP<br>**50.53%** $AP_{95}$<br>**68+ FPS** (Edge GPU) | 🚀 Core Mainline |
-| **[Unity Sim-to-Real Loop](https://github.com/MRCROW173/Yolo-Unity-Detection-Dystem)** | Closed-loop 3D simulation pipeline: parametric scene randomization, pixel-accurate bounding projection audit, and automated YOLO annotation export | **Zero-Manual** Labeling<br>**Sub-pixel** Projection<br>**964+** Multi-Source Data | 🔄 Production |
+| **[LSAD-YOLO](LSAD_YOLO_OVERVIEW.md)**<br>*(Self-developed Detector)* | Shallow detail retention (`PSDR-Down`), smooth-floor annealed localization loss (`AdaInner-CIoU`), Gaussian foreground gating (`GSFMGate`) | Dev mAP@50: **90.41%**<br>Strict Loc $AP_{95}$: **50.53%**<br>Edge GPU Speed: **68+ FPS** | 🚀 Core Mainline<br>[📖 Tech Overview](LSAD_YOLO_OVERVIEW.md)<br><sub>🔒 Private Research Workspace</sub> |
+| **[Unity Sim-to-Real Loop](LSAD_YOLO_OVERVIEW.md#4-closed-loop-sim-to-real-digital-twin-pipeline)**<br>*(Digital Twin & Auto-Labeling)* | Closed-loop 3D simulation pipeline: parametric scene randomization, pixel-accurate bounding projection audit, and automated YOLO annotation export | **Zero-Manual** Labeling<br>**Sub-pixel** Projection<br>**964+** Multi-Source Data | 🔄 Production<br>[📖 System Pipeline](LSAD_YOLO_OVERVIEW.md#4-closed-loop-sim-to-real-digital-twin-pipeline)<br><sub>🔒 Private Research Workspace</sub> |
+
+> 📌 **Repository Notice**: Active training execution, raw dataset captures, and checkpoint weights are maintained in a private research workspace (`MRCROW173/Yolo-Unity-Detection-Dystem`) to comply with academic publication and IP requirements. The complete mathematical formulation, paired ablation benchmarks, and verification evidence are openly documented in the **[LSAD-YOLO Technical Overview](LSAD_YOLO_OVERVIEW.md)**.
+
+<details>
+<summary>🇨🇳 <strong>点击展开中文核心成果与自研模型摘要 (Click to expand Chinese Research Summary)</strong></summary>
+
+<br>
+
+- **自研 LSAD-YOLO 架构**：针对微小目标与复杂遮挡场景，研发浅层细节保留下采样（`PSDR-Down`）与高斯软掩码前景门控（`GSFMGate`），结合平滑软下限定位退火损失（`AdaInner-CIoU`），在维持 68+ FPS 边缘端推理速度的同时，开发集达到 **90.41% mAP@50**，严格定位 **$AP_{95}$ 达 50.53%**（对比基线显著提升 +2.33 pp，且**保持 0 参数膨胀**）。
+- **Unity 仿真到实机（Sim-to-Real）数据闭环**：基于 Unity 3D 参数化仿真场景全自动无损生成真值检测框，消除人工标框松弛（1~3 像素系统误差），打通 USB/UVC 真实相机采集与低延迟推理验证全链路。
+- 更多中文详情请直接查阅：[🇨🇳 中文完整主页 (README_zh.md)](README_zh.md)。
+
+</details>
+
+---
+
+## Visual Evidence & Digital Twin Loop
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRCROW173/MRCROW173/main/assets/sim2real-showcase.png" alt="LSAD-YOLO Sim-to-Real Digital Twin Perception Loop" width="100%">
+</p>
+<p align="center">
+  <sub>End-to-end perception loop: from 3D parametric synthesis with sub-pixel annotations in Unity to physical-camera low-latency boundary localization.</sub>
+</p>
 
 ---
 
