@@ -5,73 +5,89 @@
 </picture>
 
 <p align="center">
-  <a href="#about">About</a> &nbsp; / &nbsp;
-  <a href="#current-work">Current work</a> &nbsp; / &nbsp;
-  <a href="#technical-toolkit">Toolkit</a> &nbsp; / &nbsp;
-  <a href="#connect">Connect</a>
+  <a href="#about">About</a> &nbsp;·&nbsp;
+  <a href="#flagship-architectures--milestones">Flagship Systems</a> &nbsp;·&nbsp;
+  <a href="#research--engineering-focus">Research Focus</a> &nbsp;·&nbsp;
+  <a href="#technical-matrix">Technical Matrix</a> &nbsp;·&nbsp;
+  <a href="#engineering-principles">Principles</a> &nbsp;·&nbsp;
+  <a href="mailto:wz13124154500@outlook.com">Contact</a>
 </p>
-
-## About
-
-I'm **Wang Zhe**, a student developer working at the intersection of **computer vision, simulation, and practical software engineering**. Here on GitHub, you'll find me as **MRCROW173**.
-
-I enjoy following an idea through its entire lifecycle: understanding the mechanism, building an implementation, examining the results, and making the workflow easier to reproduce. My interests span learning-based visual perception, synthetic data generation, embedded control, and the everyday tools that make development more reliable.
-
-My current focus is on connecting models with working systems. That means thinking about data quality alongside network architecture, training behavior alongside inference, and experimental results alongside the software needed to inspect them.
-
-> Understand the mechanism. Build the system. Check the evidence.
-
-## Current work
-
-### 01 &nbsp; Computer vision & detection research
-
-My **LSAD-YOLO** work explores object detection with an emphasis on small targets, localization, detail preservation, and difficult visual conditions. I work with Python, PyTorch, and YOLO-based training and inference workflows, studying how architectural choices and loss functions interact with the data.
-
-An important part of this work is the experimental process itself: paired baselines, focused ablations, dataset audits, error analysis, and clear records of what a result actually supports. I am also interested in training performance, particularly where data loading, CPU work, and GPU computation meet.
-
-### 02 &nbsp; Unity simulation & synthetic data
-
-In a separate **Unity data-loop project**, I work on the path from randomized scenes to usable detection datasets: image capture, automatic annotations, label checks, dataset construction, training, and inspection of model errors.
-
-This direction combines Unity and C# with Python tooling. It includes connecting simulation output to inference services and visual overlays, so the workflow can be checked as a running system. I treat dataset iteration and model research as distinct questions, each with its own experiments and evidence.
-
-### 03 &nbsp; Embedded systems & software foundations
-
-My embedded experience includes working with **STM32-based control code**, including encoder feedback, motor-control logic, timers, and PID-related modules. I enjoy understanding the relationship between a software decision and its behavior on a physical system.
-
-Alongside that work, I continue developing my foundations in **C/C++, Java, and SQL** through programming exercises, application logic, relational queries, and database workflows. These fundamentals inform how I organize larger projects and reason about their behavior.
-
-### 04 &nbsp; Developer tools & automation
-
-I use scripting and AI-assisted development tools to reduce repetitive work, inspect project state, and improve technical documentation. My practical interests include local model integration, environment setup, reproducible execution, and small utilities that make a complicated workflow easier to operate.
-
-I value automation most when its output can be inspected: a command that runs, a result that can be checked, and a record that explains what happened.
-
-## Technical toolkit
-
-| Area | Tools & interests |
-| :--- | :--- |
-| **Vision & learning** | Python · PyTorch · YOLO · OpenCV · CUDA training and inference |
-| **Simulation** | Unity · C# · scene randomization · synthetic images and annotations |
-| **Embedded development** | C/C++ · STM32 · Keil · feedback and control logic |
-| **Software & data** | Java · SQL · MySQL · SQL Server |
-| **Engineering workflow** | Git · GitHub · PowerShell · experiment logs · technical documentation |
-
-## How I work
-
-- **Start with the evidence.** Read the existing code, documentation, and experiment records before changing a system.
-- **Make comparisons meaningful.** Keep evaluation protocols explicit and separate development data from independent testing.
-- **Verify the actual outcome.** A successful command is a useful signal; a working model, interface, or output is the result I want to check.
-- **Keep changes traceable.** Preserve useful baselines, retain reproducible steps, and leave the next iteration easier to understand.
-
-I'm continuing to deepen my understanding of robust visual perception, simulation-to-real transfer, efficient model execution, and the engineering discipline that connects them.
-
-## Connect
-
-I'm interested in exchanging ideas about computer vision experiments, simulation tooling, embedded development, and reproducible research workflows.
-
-**[Email](mailto:wz13124154500@outlook.com)** &nbsp; / &nbsp; **[Browse my repositories](https://github.com/MRCROW173?tab=repositories)**
 
 ---
 
-<p align="center"><sub>Curiosity in the ideas. Care in the implementation. Clarity in the evidence.</sub></p>
+## About
+
+I'm **Wang Zhe** (known on GitHub as **[MRCROW173](https://github.com/MRCROW173)**). I work at the intersection of **lightweight computer vision architectures, simulation-to-real digital twins, and reliable systems engineering**.
+
+My engineering philosophy centers on closing the full loop: understanding the underlying mathematical mechanism, building clean and performant implementations, rigorously validating against frozen benchmarks, and automating workflows for end-to-end reproducibility.
+
+> **Observe the mechanism. Build the system. Verify the evidence.**
+
+---
+
+## Flagship Architectures & Milestones
+
+| System / Repository | Key Innovations & Architecture | Primary Metrics & Highlights | Status |
+| :--- | :--- | ---: | :---: |
+| **[LSAD-YOLO](https://github.com/MRCROW173/Yolo-Unity-Detection-Dystem)** | Self-developed lightweight detector; shallow detail retention (`PSDR-Down`), smooth-floor annealed localization loss (`AdaInner-CIoU`), Gaussian foreground gating (`GSFMGate`) | **90.41%** Dev mAP<br>**50.53%** $AP_{95}$<br>**68+ FPS** (Edge GPU) | 🚀 Core Mainline |
+| **[Unity Sim-to-Real Loop](https://github.com/MRCROW173/Yolo-Unity-Detection-Dystem)** | Closed-loop 3D simulation pipeline: parametric scene randomization, pixel-accurate bounding projection audit, and automated YOLO annotation export | **Zero-Manual** Labeling<br>**Sub-pixel** Projection<br>**964+** Multi-Source Data | 🔄 Production |
+
+---
+
+## Research & Engineering Focus
+
+### 🔬 Object Detection & Loss Dynamics (LSAD-YOLO)
+- **Architectural Refinement**: Pioneering detail-preserving shallow downsampling (`PSDR-Down`) and high-resolution bridging to combat feature collapse on micro and occluded targets without explosive computational overhead.
+- **Dynamic Loss Formulation**: Developing smooth-floor annealed bounding box regression (`AdaInner-CIoU` & `Alpha-CIoU`), addressing TAL (Task-Aligned Assigner) variance and sub-pixel boundary instability in tight localization tasks.
+- **Empirical Rigor**: Enforcing paired baseline controls (plain YOLOv12n / YOLOv8n), frozen evaluation benchmarks, and systematic error taxonomy (classification vs. localization vs. background false positives).
+
+### 🎮 Simulation-to-Real Digital Twin (Unity Loop)
+- **Synthetic Data Generation**: Constructing parameterized 3D synthetic scenes in Unity (C#) with automatic camera calibration, multi-angle lighting randomization, and synthetic-to-real domain gap mitigation.
+- **End-to-End Inference Services**: Linking real-time camera ingestion (USB/UVC) with low-latency YOLO inference backends, live visual overlays, and automated dataset quality auditing.
+- **Domain Independence**: Treating synthetic data iteration and model architectural innovations as decoupled experimental axes to ensure cross-domain generalization.
+
+### ⚡ Embedded Systems & Physical Computing
+- **Hardware-Level Control**: Developing low-level firmware on **STM32 microcontrollers** (C/C++), implementing high-precision encoder reading, closed-loop PID motion control, and real-time hardware timers.
+- **Systems Thinking**: Connecting low-level software decisions directly to physical actuator behavior, ensuring stability, power efficiency, and timing determinism.
+
+### 🛠️ Developer Infrastructure & Reproducible Workflows
+- **Autonomous Tooling**: Building lightweight CLI watchers, Git mirror daemons, and automated validation scripts that run in the background to ensure experimental integrity.
+- **Evidence-Driven Records**: Maintaining explicit hash snapshots, provenance receipts, and structured markdown knowledge bases across multi-stage iterations.
+
+---
+
+## Technical Matrix
+
+| Domain | Core Frameworks & Tooling | Engineering Scope & Practice |
+| :--- | :--- | :--- |
+| **Vision & Deep Learning** | Python 3.11 · PyTorch · Ultralytics · OpenCV · CUDA · TensorRT | Lightweight model architecture, custom loss design, TAL assignment analysis, edge model quantization |
+| **Simulation & 3D** | Unity 3D · C# · HLSL Shader Basics · Unity Editor Scripting | Automated camera raster capture, coordinate projection audits, synthetic dataset generation pipelines |
+| **Embedded & Systems** | C / C++ · STM32 (HAL / LL) · Keil MDK · PlatformIO | Motor control, optical encoders, PID tuning, UART / I2C / SPI bus protocols, timer interrupts |
+| **Software & Foundations** | Java · SQL (MySQL, SQL Server) · Git CI/CD · PowerShell | Relational schema design, asynchronous event dispatchers, background monitoring daemons |
+
+---
+
+## Engineering Principles
+
+- **Start with the evidence.** Read existing codebases, historical benchmark data, and regression records before altering architecture or training hyperparameters.
+- **Enforce paired controls.** Every mechanism proposal must run against an identical control baseline under frozen budget, seed, and data protocols.
+- **Check actual runtime outputs.** A process exiting with code 0 is only a signal; a verified prediction mask, calibrated bounding box, or hardware response is the true test of success.
+- **Design for transparent provenance.** Maintain verifiable hash trails, explicit audit logs, and self-documenting workflows so that all findings can be reproduced independently.
+
+---
+
+## Connect
+
+I welcome technical discussions, academic exchanges, and collaborative exploration in **computer vision research, simulation pipelines, and embedded edge systems**.
+
+<p align="center">
+  <a href="mailto:wz13124154500@outlook.com"><strong>📧 Email Me</strong> (wz13124154500@outlook.com)</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/MRCROW173?tab=repositories"><strong>📦 Browse Repositories</strong></a>
+</p>
+
+---
+
+<p align="center">
+  <sub>Observe the mechanism. Build the system. Verify the evidence. · Designed with precision for GitHub Dark & Light themes.</sub>
+</p>
